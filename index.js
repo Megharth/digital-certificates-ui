@@ -28,19 +28,39 @@ let switchTab = function(tab) {
 let getCertificate = function() {
   let phone = document.getElementById('contact').value
   let errorContainer = document.getElementById('error')
-  console.log(phone)
   if(phone === ''){
     errorContainer.innerText = "Number cannot be empty"
     errorContainer.style.display = 'block'
   }
+  else if(phone.length < 10){
+    errorContainer.innerText = "Invalid Number"
+    errorContainer.style.display = 'block'
+  }
   else {
-    document.location.href = 'certificate.html?phone='+phone
+    $.ajax({
+      url: 'https://certification-api.herokuapp.com/talks/getCertificate',
+      method: "POST",
+      data: {
+        phone: phone.toString()
+      }
+    }).then((response)=>{
+      if(response) {
+        let name = response.name
+        let code = response.code
+        document.location.href = 'certificate.html?name='+name+'&code='+code
+      }
+      else {
+        errorContainer.innerText = "Number not registered"
+        errorContainer.style.display = 'block'
+      }
+    })
+
   }
 }
 
 let verifyCertificate = function() {
   let name = document.getElementById('name').value
-  let code = document.getElementById('code').value
+  let code = document.getElementById('code').value.toLowerCase()
   $.ajax({
     url: 'https://certification-api.herokuapp.com/talks/verify',
     method: "POST",
