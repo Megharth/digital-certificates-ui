@@ -11,7 +11,7 @@ window.onload = function() {
   }
 
   name = data.name
-  name = name.replace("%20", " ")
+  name = name.split("%20").join(" ")
   id = data.code
 
   let height = image.naturalHeight
