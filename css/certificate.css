@@ -15,6 +15,10 @@
   color: white;
 }
 
+#name {
+  text-transform: capitalize;
+}
+
 #id {
   font-size: 52px;
   text-align: right;

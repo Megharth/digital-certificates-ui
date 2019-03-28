@@ -165,7 +165,7 @@ let getCertificate = function() {
 }
 
 let verifyCertificate = function() {
-  let name = document.getElementById('name').value
+  let name = document.getElementById('name').value.toLowerCase()
   let code = document.getElementById('code').value.toLowerCase()
   let eventName = document.getElementById('events').value
   $.ajax({
