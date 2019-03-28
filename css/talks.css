@@ -1,0 +1,114 @@
+body {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+.heading {
+    position: absolute;
+    top: 20%;
+    transform: translate(0, -50%);
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 52px;
+    width: 100%;
+    text-align: center;
+    color: orangered;
+}
+
+.heading:before {
+    content: 'bvm talks';
+    text-transform: uppercase;
+    position: absolute;
+    transform: translate(4px, -4px);
+    z-index: -1;
+    color: black;
+}
+
+.sub-heading {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: black;
+    color: white;
+    text-transform: uppercase;
+    font-size: 48px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.options {
+    position: absolute;
+    top: 42%;
+    width: 100%;
+    text-align: center;
+    transform: translate(0, -50%);
+}
+
+.option {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.options .active {
+    background: orangered;
+    color: white;
+}
+.inputs {
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.inputs .btn {
+    background: transparent;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.inputs .btn:hover {
+    background: orangered;
+    color: white;
+}
+
+.inputs input {
+    margin: 5px;
+}
+
+.verify {
+    display: none;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+    display: none;
+    text-transform: uppercase;
+}
+
+.message {
+    text-transform: uppercase;
+    display: none;
+    margin-top: 10px;
+}
+
+.back {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    background: orangered;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+}

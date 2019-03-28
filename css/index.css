@@ -1,0 +1,47 @@
+body {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+    overflow-x: hidden;
+}
+
+.event {
+    height: 250px;
+    width: 300px;
+    background: black;
+    color: white;
+    margin: 10px auto;
+    /*display: inline-block;*/
+    text-align: center;
+    transition: all 0.4s linear;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.event .heading {
+    color: white;
+    padding-top: 40px;
+}
+
+.event:before {
+    content: '';
+    position: absolute;
+    height: 250px;
+    width: 300px;
+    background: orangered;
+    transform: translate(-140px, 10px);
+    z-index: -1;
+}
+
+.heading {
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 42px;
+    width: 100%;
+    text-align: center;
+    color: orangered;
+}

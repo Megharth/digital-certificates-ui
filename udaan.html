@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Certificates</title>
+    <!-- META TAGS -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+    <!-- STYLES -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/udaan.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet">
+</head>
+<body>
+<div id="main">
+    <div class="back" onclick="location.replace('index.html')">Back</div>
+    <div class="heading">Udaan</div>
+    <div class="sub-heading">Certificates</div>
+    <div class="options">
+        <div class="option active" onclick="switchTab('get')">Get Certificate</div>
+        <div class="option" onclick="switchTab('verify')">Verify Certificate</div>
+    </div>
+    <div class="inputs">
+        <!-- 'GET' INPUTS-->
+        <select id="department-get" onchange="populateEvents()" class="form-control get-certificate">
+            <option value="null">Select Event Type</option>
+            <option value="techEvents">Tech Events</option>
+            <option value="nonTechEvents">Non-Tech Events</option>
+        </select>
+
+        <select id="events-get" class="form-control get-certificate">
+            <option value="null">Select Event</option>
+        </select>
+
+        <input type="number" id="contact" class="form-control get-certificate" placeholder="Enter Registered Phone Number">
+        <button class="get-certificate btn" onclick="getCertificate()">Get Certificate</button>
+
+        <!-- 'VERIFY' INPUTS-->
+        <input type="text" class="form-control verify" placeholder="Enter Name" id="name">
+        <input type="text" class="form-control verify" placeholder="Enter code" id="code">
+        <select id="department" onchange="populateEventsVerify()" class="form-control verify">
+            <option value="null">Select Event Type</option>
+            <option value="techEvents">Tech Events</option>
+            <option value="nonTechEvents">Non-Tech Events</option>
+        </select>
+
+        <select id="events" class="form-control verify">
+            <option value="null">Select Event</option>
+        </select>
+        <button class="verify btn" onclick="verifyCertificate()">Verify Certificate</button>
+        <div class="message" id="message"></div>
+        <div class="error" id="error">Some error</div>
+    </div>
+</div>
+<!-- SCRIPTS -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/udaan.js"></script>
+
+</body>
+</html>

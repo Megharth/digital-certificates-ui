@@ -3,12 +3,16 @@
   background: transparent;
 }
 
-#name, #id, #watermark {
+#name, #id, #watermark, #event {
   position: absolute;
   font-size: 102px;
   transform: translate(0, -50%);
   text-align: center;
   font-style: italic;
+}
+
+#event {
+  color: white;
 }
 
 #id {
