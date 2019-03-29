@@ -28,6 +28,7 @@ body {
     color: black;
 }
 
+
 .sub-heading {
     position: absolute;
     top: 30%;
@@ -112,4 +113,11 @@ body {
     padding: 10px;
     color: white;
     cursor: pointer;
+}
+
+.note-heading {
+    margin-top: 20px;
+    font-size: 25px;
+    color: orangered;
+    font-weight: bolder;
 }
